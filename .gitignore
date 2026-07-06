@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+
+# Sim / RL artefactes
+runs/
+logs/
+checkpoints/
+*.ckpt
+*.pt
+*.pth
+*.onnx
+
+# Models de difusió (pesats — no al repo)
+*.safetensors
+*.bin
+
+# Sistema
+.DS_Store
+*.swp

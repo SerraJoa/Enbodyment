@@ -1,0 +1,77 @@
+# Metadades del maniquí — sidecar del URDF
+#
+# El URDF descriu l'estructura física (font de veritat). Aquest fitxer hi afegeix
+# el que cada BRANCA del projecte necessita sense embrutar l'estàndard URDF.
+# Cada branca llegeix només la seva secció.
+
+# =====================================================================
+# IDENTITAT — ortogonal a l'estructura (veure conventions.md)
+# =====================================================================
+# L'estructura (noms de links/joints) és compartida. La identitat és per-instància.
+# Un mateix esquelet + qualsevol character_id. No barrejar mai els dos eixos.
+identity:
+  character_id: null          # s'omple per instància: id de LoRA / embedding facial
+  # La cara NO es rigga a l'esquelet: la resol l'IP-Adapter/FaceID a la branca visual.
+
+# =====================================================================
+# BRANCA CONTROL — punts de contacte
+# =====================================================================
+contact:
+  # Contacte normal de locomoció: on el cos toca terra caminant.
+  locomotion:
+    - left_foot
+    - left_forefoot
+    - right_foot
+    - right_forefoot
+  # Contacte de recuperació: on el cos toca en caure. Etiquetat des de l'inici
+  # encara que la política de fall-recovery no existeixi encara.
+  recovery:
+    - left_shin      # genoll (extrem distal del thigh / proximal del shin)
+    - right_shin
+    - left_hand
+    - right_hand
+    - pelvis
+
+# =====================================================================
+# BRANCA VISUAL (difusió) — regions per generar màscares
+# =====================================================================
+# Cada regió agrupa links que la difusió tracta com una zona per màscara/ID de color.
+# Serveix per: IP-Adapter regional, LoRA per regió, ControlNet per parts.
+regions:
+  head:   [head, neck]
+  torso:  [chest, spine, pelvis]
+  arm_l:  [left_upper_arm, left_forearm, left_hand]
+  arm_r:  [right_upper_arm, right_forearm, right_hand]
+  leg_l:  [left_thigh, left_shin, left_foot, left_forefoot]
+  leg_r:  [right_thigh, right_shin, right_foot, right_forefoot]
+
+# =====================================================================
+# BRANCA CONTROL — espai de sinergies (PREVIST, buit de moment)
+# =====================================================================
+# Grups de joints que s'activen COORDINADAMENT (no independentment).
+# Mecanisme d'activació: gating per CONSONÀNCIA amb la intenció (no per error).
+# De moment declarem l'estructura i UNA sinergia de prova; s'omple a la fase
+# de control. Veure docs/architecture.md secció "Sinergies i gating".
+synergies:
+  # Exemple/plantilla — sinergia de contrapès de braços per a marxa:
+  arm_swing:
+    joints: [left_shoulder, right_shoulder]
+    # signe relatiu: els braços oscil·len en antifase (contrapès natural)
+    phase: [1.0, -1.0]
+    note: "plantilla; els pesos reals els aprèn la política sobre el substrat passiu"
+  # (més sinergies s'afegeixen aquí quan emergeixin o es defineixin explícitament)
+
+# =====================================================================
+# PROPIETATS PASSIVES GLOBALS (referència; el detall real és al URDF)
+# =====================================================================
+# El substrat de control: el cos NO té estabilitzador amb objectiu. Només
+# stiffness/damping passius per joint (definits a <dynamics> del URDF).
+# Aquí es documenta la intenció perquè quedi explícita a nivell de projecte.
+passive_substrate:
+  philosophy: >
+    El cos ofereix elasticitat i inèrcia, no correcció. Cap controlador persegueix
+    una postura. Equilibri, contrapès i postura anticipatòria emergeixen de la
+    política que minimitza el delta intenció-vs-real amb mínima energia.
+  arms_mass_note: >
+    La massa dels braços (2.2+1.6+0.5 kg cadascun) és deliberadament suficient
+    per permetre contrapès real, no decorativa.
