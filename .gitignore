@@ -4,6 +4,11 @@ __pycache__/
 .venv/
 venv/
 *.egg-info/
+.pytest_cache/
+
+# Godot
+.godot/
+*.import/
 
 # Sim / RL artefactes
 runs/

@@ -1,0 +1,38 @@
+[project]
+name = "embodiment-visual"
+version = "0.1.0"
+description = "Pipeline de difusio en temps real de la branca visual (embodiment)"
+requires-python = ">=3.10"
+dependencies = [
+    "numpy",
+    "opencv-python",
+    "pillow",
+    "pyyaml",
+    "torch",
+    "torchvision",
+]
+
+[project.optional-dependencies]
+# Pesat: models de difusio. Instal·lar nomes al node d'inferencia (Strix Halo),
+# no en aquesta maquina de desenvolupament (CPU-only, iGPU feble).
+diffusion = [
+    "diffusers>=0.27",
+    "transformers",
+    "accelerate",
+]
+# IP-Adapter FaceID depen d'insightface per l'embedding facial.
+identity = [
+    "ip-adapter",
+    "insightface",
+    "onnxruntime",
+]
+dev = [
+    "pytest",
+]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]

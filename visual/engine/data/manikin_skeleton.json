@@ -1,0 +1,656 @@
+{
+  "root_link": "pelvis",
+  "links": {
+    "pelvis": {
+      "name": "pelvis",
+      "mass": 11.0,
+      "geometry": {
+        "type": "box",
+        "size": [
+          0.28,
+          0.14,
+          0.2
+        ]
+      },
+      "visual_origin_godot": [
+        -0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    "spine": {
+      "name": "spine",
+      "mass": 8.0,
+      "geometry": {
+        "type": "box",
+        "size": [
+          0.24,
+          0.2,
+          0.18
+        ]
+      },
+      "visual_origin_godot": [
+        -0.0,
+        0.1,
+        -0.0
+      ]
+    },
+    "chest": {
+      "name": "chest",
+      "mass": 14.0,
+      "geometry": {
+        "type": "box",
+        "size": [
+          0.3,
+          0.24,
+          0.22
+        ]
+      },
+      "visual_origin_godot": [
+        -0.0,
+        0.12,
+        -0.0
+      ]
+    },
+    "neck": {
+      "name": "neck",
+      "mass": 1.0,
+      "geometry": {
+        "type": "cylinder",
+        "radius": 0.045,
+        "height": 0.1
+      },
+      "visual_origin_godot": [
+        -0.0,
+        0.05,
+        -0.0
+      ]
+    },
+    "head": {
+      "name": "head",
+      "mass": 4.5,
+      "geometry": {
+        "type": "sphere",
+        "radius": 0.1
+      },
+      "visual_origin_godot": [
+        -0.0,
+        0.09,
+        -0.0
+      ]
+    },
+    "left_upper_arm": {
+      "name": "left_upper_arm",
+      "mass": 2.2,
+      "geometry": {
+        "type": "cylinder",
+        "radius": 0.045,
+        "height": 0.28
+      },
+      "visual_origin_godot": [
+        -0.0,
+        -0.14,
+        -0.0
+      ]
+    },
+    "left_forearm": {
+      "name": "left_forearm",
+      "mass": 1.6,
+      "geometry": {
+        "type": "cylinder",
+        "radius": 0.038,
+        "height": 0.26
+      },
+      "visual_origin_godot": [
+        -0.0,
+        -0.13,
+        -0.0
+      ]
+    },
+    "left_hand": {
+      "name": "left_hand",
+      "mass": 0.5,
+      "geometry": {
+        "type": "box",
+        "size": [
+          0.09,
+          0.1,
+          0.05
+        ]
+      },
+      "visual_origin_godot": [
+        -0.0,
+        -0.05,
+        -0.0
+      ]
+    },
+    "right_upper_arm": {
+      "name": "right_upper_arm",
+      "mass": 2.2,
+      "geometry": {
+        "type": "cylinder",
+        "radius": 0.045,
+        "height": 0.28
+      },
+      "visual_origin_godot": [
+        -0.0,
+        -0.14,
+        -0.0
+      ]
+    },
+    "right_forearm": {
+      "name": "right_forearm",
+      "mass": 1.6,
+      "geometry": {
+        "type": "cylinder",
+        "radius": 0.038,
+        "height": 0.26
+      },
+      "visual_origin_godot": [
+        -0.0,
+        -0.13,
+        -0.0
+      ]
+    },
+    "right_hand": {
+      "name": "right_hand",
+      "mass": 0.5,
+      "geometry": {
+        "type": "box",
+        "size": [
+          0.09,
+          0.1,
+          0.05
+        ]
+      },
+      "visual_origin_godot": [
+        -0.0,
+        -0.05,
+        -0.0
+      ]
+    },
+    "left_thigh": {
+      "name": "left_thigh",
+      "mass": 7.0,
+      "geometry": {
+        "type": "cylinder",
+        "radius": 0.07,
+        "height": 0.42
+      },
+      "visual_origin_godot": [
+        -0.0,
+        -0.21,
+        -0.0
+      ]
+    },
+    "left_shin": {
+      "name": "left_shin",
+      "mass": 3.5,
+      "geometry": {
+        "type": "cylinder",
+        "radius": 0.05,
+        "height": 0.4
+      },
+      "visual_origin_godot": [
+        -0.0,
+        -0.2,
+        -0.0
+      ]
+    },
+    "left_foot": {
+      "name": "left_foot",
+      "mass": 0.9,
+      "geometry": {
+        "type": "box",
+        "size": [
+          0.09,
+          0.05,
+          0.14
+        ]
+      },
+      "visual_origin_godot": [
+        -0.0,
+        -0.03,
+        -0.04
+      ]
+    },
+    "left_forefoot": {
+      "name": "left_forefoot",
+      "mass": 0.4,
+      "geometry": {
+        "type": "box",
+        "size": [
+          0.09,
+          0.03,
+          0.1
+        ]
+      },
+      "visual_origin_godot": [
+        -0.0,
+        -0.02,
+        -0.05
+      ]
+    },
+    "right_thigh": {
+      "name": "right_thigh",
+      "mass": 7.0,
+      "geometry": {
+        "type": "cylinder",
+        "radius": 0.07,
+        "height": 0.42
+      },
+      "visual_origin_godot": [
+        -0.0,
+        -0.21,
+        -0.0
+      ]
+    },
+    "right_shin": {
+      "name": "right_shin",
+      "mass": 3.5,
+      "geometry": {
+        "type": "cylinder",
+        "radius": 0.05,
+        "height": 0.4
+      },
+      "visual_origin_godot": [
+        -0.0,
+        -0.2,
+        -0.0
+      ]
+    },
+    "right_foot": {
+      "name": "right_foot",
+      "mass": 0.9,
+      "geometry": {
+        "type": "box",
+        "size": [
+          0.09,
+          0.05,
+          0.14
+        ]
+      },
+      "visual_origin_godot": [
+        -0.0,
+        -0.03,
+        -0.04
+      ]
+    },
+    "right_forefoot": {
+      "name": "right_forefoot",
+      "mass": 0.4,
+      "geometry": {
+        "type": "box",
+        "size": [
+          0.09,
+          0.03,
+          0.1
+        ]
+      },
+      "visual_origin_godot": [
+        -0.0,
+        -0.02,
+        -0.05
+      ]
+    }
+  },
+  "joints": [
+    {
+      "name": "spine",
+      "type": "revolute",
+      "parent": "pelvis",
+      "child": "spine",
+      "origin_godot": [
+        -0.0,
+        0.08,
+        -0.0
+      ],
+      "axis_godot": [
+        -1.0,
+        0.0,
+        -0.0
+      ],
+      "lower": -0.6,
+      "upper": 0.8
+    },
+    {
+      "name": "chest",
+      "type": "revolute",
+      "parent": "spine",
+      "child": "chest",
+      "origin_godot": [
+        -0.0,
+        0.22,
+        -0.0
+      ],
+      "axis_godot": [
+        -1.0,
+        0.0,
+        -0.0
+      ],
+      "lower": -0.4,
+      "upper": 0.5
+    },
+    {
+      "name": "neck",
+      "type": "revolute",
+      "parent": "chest",
+      "child": "neck",
+      "origin_godot": [
+        -0.0,
+        0.26,
+        -0.0
+      ],
+      "axis_godot": [
+        -1.0,
+        0.0,
+        -0.0
+      ],
+      "lower": -0.7,
+      "upper": 0.7
+    },
+    {
+      "name": "head",
+      "type": "fixed",
+      "parent": "neck",
+      "child": "head",
+      "origin_godot": [
+        -0.0,
+        0.1,
+        -0.0
+      ],
+      "axis_godot": [
+        -1.0,
+        0.0,
+        -0.0
+      ],
+      "lower": null,
+      "upper": null
+    },
+    {
+      "name": "left_shoulder",
+      "type": "revolute",
+      "parent": "chest",
+      "child": "left_upper_arm",
+      "origin_godot": [
+        -0.2,
+        0.22,
+        -0.0
+      ],
+      "axis_godot": [
+        -1.0,
+        0.0,
+        -0.0
+      ],
+      "lower": -3.0,
+      "upper": 3.0
+    },
+    {
+      "name": "left_elbow",
+      "type": "revolute",
+      "parent": "left_upper_arm",
+      "child": "left_forearm",
+      "origin_godot": [
+        -0.0,
+        -0.28,
+        -0.0
+      ],
+      "axis_godot": [
+        -1.0,
+        0.0,
+        -0.0
+      ],
+      "lower": 0.0,
+      "upper": 2.6
+    },
+    {
+      "name": "left_wrist",
+      "type": "revolute",
+      "parent": "left_forearm",
+      "child": "left_hand",
+      "origin_godot": [
+        -0.0,
+        -0.26,
+        -0.0
+      ],
+      "axis_godot": [
+        -1.0,
+        0.0,
+        -0.0
+      ],
+      "lower": -1.0,
+      "upper": 1.0
+    },
+    {
+      "name": "right_shoulder",
+      "type": "revolute",
+      "parent": "chest",
+      "child": "right_upper_arm",
+      "origin_godot": [
+        0.2,
+        0.22,
+        -0.0
+      ],
+      "axis_godot": [
+        -1.0,
+        0.0,
+        -0.0
+      ],
+      "lower": -3.0,
+      "upper": 3.0
+    },
+    {
+      "name": "right_elbow",
+      "type": "revolute",
+      "parent": "right_upper_arm",
+      "child": "right_forearm",
+      "origin_godot": [
+        -0.0,
+        -0.28,
+        -0.0
+      ],
+      "axis_godot": [
+        -1.0,
+        0.0,
+        -0.0
+      ],
+      "lower": 0.0,
+      "upper": 2.6
+    },
+    {
+      "name": "right_wrist",
+      "type": "revolute",
+      "parent": "right_forearm",
+      "child": "right_hand",
+      "origin_godot": [
+        -0.0,
+        -0.26,
+        -0.0
+      ],
+      "axis_godot": [
+        -1.0,
+        0.0,
+        -0.0
+      ],
+      "lower": -1.0,
+      "upper": 1.0
+    },
+    {
+      "name": "left_hip",
+      "type": "revolute",
+      "parent": "pelvis",
+      "child": "left_thigh",
+      "origin_godot": [
+        -0.1,
+        -0.07,
+        -0.0
+      ],
+      "axis_godot": [
+        -1.0,
+        0.0,
+        -0.0
+      ],
+      "lower": -2.0,
+      "upper": 1.2
+    },
+    {
+      "name": "left_knee",
+      "type": "revolute",
+      "parent": "left_thigh",
+      "child": "left_shin",
+      "origin_godot": [
+        -0.0,
+        -0.42,
+        -0.0
+      ],
+      "axis_godot": [
+        -1.0,
+        0.0,
+        -0.0
+      ],
+      "lower": -2.6,
+      "upper": 0.0
+    },
+    {
+      "name": "left_ankle",
+      "type": "revolute",
+      "parent": "left_shin",
+      "child": "left_foot",
+      "origin_godot": [
+        -0.0,
+        -0.4,
+        -0.0
+      ],
+      "axis_godot": [
+        -1.0,
+        0.0,
+        -0.0
+      ],
+      "lower": -0.9,
+      "upper": 0.5
+    },
+    {
+      "name": "left_forefoot",
+      "type": "revolute",
+      "parent": "left_foot",
+      "child": "left_forefoot",
+      "origin_godot": [
+        -0.0,
+        -0.03,
+        -0.11
+      ],
+      "axis_godot": [
+        -1.0,
+        0.0,
+        -0.0
+      ],
+      "lower": -0.5,
+      "upper": 0.7
+    },
+    {
+      "name": "right_hip",
+      "type": "revolute",
+      "parent": "pelvis",
+      "child": "right_thigh",
+      "origin_godot": [
+        0.1,
+        -0.07,
+        -0.0
+      ],
+      "axis_godot": [
+        -1.0,
+        0.0,
+        -0.0
+      ],
+      "lower": -2.0,
+      "upper": 1.2
+    },
+    {
+      "name": "right_knee",
+      "type": "revolute",
+      "parent": "right_thigh",
+      "child": "right_shin",
+      "origin_godot": [
+        -0.0,
+        -0.42,
+        -0.0
+      ],
+      "axis_godot": [
+        -1.0,
+        0.0,
+        -0.0
+      ],
+      "lower": -2.6,
+      "upper": 0.0
+    },
+    {
+      "name": "right_ankle",
+      "type": "revolute",
+      "parent": "right_shin",
+      "child": "right_foot",
+      "origin_godot": [
+        -0.0,
+        -0.4,
+        -0.0
+      ],
+      "axis_godot": [
+        -1.0,
+        0.0,
+        -0.0
+      ],
+      "lower": -0.9,
+      "upper": 0.5
+    },
+    {
+      "name": "right_forefoot",
+      "type": "revolute",
+      "parent": "right_foot",
+      "child": "right_forefoot",
+      "origin_godot": [
+        -0.0,
+        -0.03,
+        -0.11
+      ],
+      "axis_godot": [
+        -1.0,
+        0.0,
+        -0.0
+      ],
+      "lower": -0.5,
+      "upper": 0.7
+    }
+  ],
+  "regions": {
+    "head": [
+      "head",
+      "neck"
+    ],
+    "torso": [
+      "chest",
+      "spine",
+      "pelvis"
+    ],
+    "arm_l": [
+      "left_upper_arm",
+      "left_forearm",
+      "left_hand"
+    ],
+    "arm_r": [
+      "right_upper_arm",
+      "right_forearm",
+      "right_hand"
+    ],
+    "leg_l": [
+      "left_thigh",
+      "left_shin",
+      "left_foot",
+      "left_forefoot"
+    ],
+    "leg_r": [
+      "right_thigh",
+      "right_shin",
+      "right_foot",
+      "right_forefoot"
+    ]
+  }
+}
